@@ -87,6 +87,11 @@
           "type": "string",
           "default": "",
           "description": "This setting is used to forward the machine name to bitbake."
+        },
+        "bitbake.oeEnvSetupScript": {
+          "type": "string",
+          "default": "oe-init-build-env",
+          "description": "This script is sourced for Build Environment Setup Script"
         }
       }
     },

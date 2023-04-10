@@ -90,6 +90,10 @@ export class BitBakeProjectScanner {
         this._settingsScriptInterpreter = scriptInterpreter;
     }
 
+    set oeEnvScript(oeEnvScript: string) {
+        this._oeEnvScript = oeEnvScript;
+    }
+
     set workingPath(workingPath: string) {
         this._settingsWorkingFolder = workingPath;
     }
