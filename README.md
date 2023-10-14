@@ -1,3 +1,6 @@
+> Sorry folk, I don't have any time to work on this plugin. I'm very happy that one take over the work. Please use the fork https://github.com/savoirfairelinux/vscode-bitbake/tree/staging
+
+
 # BitBake recipe language support plugin for Visual Studio Code
 
 This Visual Studio Code plugin is based on [Example - Language Server](https://code.visualstudio.com/docs/extensions/example-language-server).
