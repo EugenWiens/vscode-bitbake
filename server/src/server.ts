@@ -86,6 +86,7 @@ interface BitbakeSettings {
 	pathToBashScriptInterpreter: string;
 	machine: string;
 	generateWorkingFolder: boolean;
+	oeEnvSetupScript: string;
 }
 
 function setSymbolScanner( newSymbolScanner: SymbolScanner ) {
@@ -103,6 +104,7 @@ connection.onDidChangeConfiguration((change) => {
 	bitBakeProjectScanner.generateWorkingPath = settings.bitbake.generateWorkingFolder;
 	bitBakeProjectScanner.scriptInterpreter = settings.bitbake.pathToBashScriptInterpreter;
 	bitBakeProjectScanner.machineName = settings.bitbake.machine;
+	bitBakeProjectScanner.oeEnvScript = settings.bitbake.oeEnvSetupScript;
 });
 
 connection.onDidChangeWatchedFiles((change) => {
