@@ -28,7 +28,7 @@ import type {
   SymbolScanner
 } from './SymbolScanner'
 
-import logger from 'winston'
+import { logger } from './lib/src/utils/OutputLogger'
 import bitBakeProjectScanner from './BitBakeProjectScanner'
 
 /**
