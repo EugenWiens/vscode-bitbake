@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "find": "^0.2.7",
+    "vscode-bitbake-lib": "file:../lib",
     "vscode-languageserver": "^8.1.0",
     "vscode-languageserver-textdocument": "^1.0.8",
     "web-tree-sitter": "^0.20.8",
@@ -30,8 +31,5 @@
   },
   "scripts": {
     "installServer": "installServerIntoExtension ../client ./package.json ./tsconfig.json"
-  },
-  "workspaces": [
-    "../client/src/lib"
-  ]
+  }
 }

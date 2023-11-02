@@ -5,7 +5,7 @@
 
 import path from 'path'
 import fs from 'fs'
-import { logger } from './lib/src/utils/OutputLogger'
+import { logger } from 'vscode-bitbake-lib'
 import { CompletionItemKind, type CompletionItem } from 'vscode-languageserver'
 
 type SuffixType = 'layer' | 'providedItem' | undefined

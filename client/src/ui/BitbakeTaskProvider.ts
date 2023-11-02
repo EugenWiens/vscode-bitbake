@@ -5,8 +5,8 @@
 
 import type * as child_process from 'child_process'
 import * as vscode from 'vscode'
-import { type BitbakeDriver } from '../lib/src/BitbakeDriver'
-import { logger } from '../lib/src/utils/OutputLogger'
+import { type BitbakeDriver } from 'vscode-bitbake-lib'
+import { logger } from 'vscode-bitbake-lib'
 
 const endOfLine: string = '\r\n'
 

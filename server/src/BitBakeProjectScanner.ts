@@ -7,7 +7,7 @@ import type childProcess from 'child_process'
 import find from 'find'
 import path from 'path'
 
-import { logger } from './lib/src/utils/OutputLogger'
+import { logger, BitbakeDriver } from 'vscode-bitbake-lib'
 
 import type {
   ElementInfo,
@@ -18,7 +18,6 @@ import type {
 import
 outputParser
   from './OutputParser'
-import { BitbakeDriver } from './lib/src/BitbakeDriver'
 interface ScannStatus {
   scanIsRunning: boolean
   scanIsPending: boolean

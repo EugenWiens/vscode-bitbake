@@ -15,5 +15,12 @@
     "type": "git",
     "url": "https://github.com/savoirfairelinux/vscode-bitbake.git"
   },
-  "scripts": {}
+  "scripts": {},
+  "main": "out/index.js",
+  "files": [
+    "out"
+  ],
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
 }

@@ -19,7 +19,7 @@ import type {
   DefinitionProvider
 } from './DefinitionProvider'
 
-import { logger } from './lib/src/utils/OutputLogger'
+import { logger } from 'vscode-bitbake-lib'
 
 interface FileContent {
   filePath: string

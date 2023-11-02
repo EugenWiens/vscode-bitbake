@@ -7,7 +7,7 @@
 
 import * as vscode from 'vscode'
 
-import { logger } from '../lib/src/utils/OutputLogger'
+import { logger } from 'vscode-bitbake-lib'
 import { type BitbakeWorkspace } from './BitbakeWorkspace'
 import { type BitbakeTaskProvider } from './BitbakeTaskProvider'
 import path from 'path'

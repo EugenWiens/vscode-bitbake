@@ -7,9 +7,9 @@ import * as vscode from 'vscode'
 import { type LanguageClient } from 'vscode-languageclient/node'
 
 import { ClientNotificationManager } from './ui/ClientNotificationManager'
-import { logger } from './lib/src/utils/OutputLogger'
+import { logger, BitbakeDriver } from 'vscode-bitbake-lib'
 import { activateLanguageServer, deactivateLanguageServer } from './language/languageClient'
-import { BitbakeDriver } from './lib/src/BitbakeDriver'
+
 import { BitbakeTaskProvider } from './ui/BitbakeTaskProvider'
 import { registerBitbakeCommands } from './ui/BitbakeCommands'
 import { BitbakeWorkspace } from './ui/BitbakeWorkspace'

@@ -28,7 +28,7 @@ import type {
   SymbolScanner
 } from './SymbolScanner'
 
-import { logger } from './lib/src/utils/OutputLogger'
+import { logger } from 'vscode-bitbake-lib'
 import bitBakeProjectScanner from './BitBakeProjectScanner'
 
 /**

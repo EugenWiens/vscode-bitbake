@@ -4,3 +4,9 @@ test
 src
 **/*.map
 tsconfig.*
+node_modules
+server
+webpack.config.js
+out
+!out/extension.js
+../lib

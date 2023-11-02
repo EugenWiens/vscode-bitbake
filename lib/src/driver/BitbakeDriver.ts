@@ -4,8 +4,9 @@
  * ------------------------------------------------------------------------------------------ */
 
 import childProcess from 'child_process'
+import axios from 'axios'
 
-import { logger } from './utils/OutputLogger'
+import { logger } from '../utils/OutputLogger'
 import { type BitbakeSettings, loadBitbakeSettings } from './BitbakeSettings'
 
 /// This class is responsible for wrapping up all bitbake classes and exposing them to the extension

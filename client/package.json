@@ -261,17 +261,17 @@
     "test": "npm run test:grammar",
     "test:grammar": "vscode-tmgrammar-test ./test/grammars/test-cases/*.bb",
     "snap-grammar": "vscode-tmgrammar-snap ./test/grammars/snaps/*.bb -u",
-    "vscode:prepublish": "npm install --omit=dev && cd ../server && npm install --omit=dev && npm run installServer",
+    "vscode:prepublish": "npm install --omit=dev && cd ../server && npm install --omit=dev && npm run installServer && cd ../client && npm run bundle",
+    "bundle": "webpack --mode production --devtool hidden-source-map",
     "package": "npm run vscode:prepublish && vsce package --target linux-x64"
   },
   "dependencies": {
+    "path-browserify": "^1.0.1",
+    "vscode-bitbake-lib": "file:../lib",
     "vscode-languageclient": "^8.1.0"
   },
   "devDependencies": {
     "@types/node": "^20.6.2",
     "@types/vscode": "^1.75.1"
-  },
-  "workspaces": [
-    "src/lib"
-  ]
+  }
 }

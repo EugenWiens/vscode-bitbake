@@ -3,7 +3,7 @@
  * Licensed under the MIT License. See License.txt in the project root for license information.
  * ------------------------------------------------------------------------------------------ */
 
-import { loadBitbakeSettings } from '../../BitbakeSettings'
+import { loadBitbakeSettings } from '../../driver/BitbakeSettings'
 
 describe('BitbakeSettings Tests', () => {
   beforeEach(() => {

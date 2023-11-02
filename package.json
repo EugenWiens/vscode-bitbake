@@ -17,11 +17,13 @@
 		"url": "https://github.com/savoirfairelinux/vscode-bitbake.git"
 	},
 	"scripts": {
-		"postinstall": "cd server && npm install && cd ../client && npm install",
+		"postinstall": "npm run link:lib && cd lib && npm install && cd ../server && npm install && cd ../client && npm install",
+		"link:lib": "cd lib && npm link && cd ../server && npm link vscode-bitbake-lib && cd ../client && npm link vscode-bitbake-lib",
 		"fetch": "npm run fetch:poky",
 		"fetch:poky": "mkdir -p resources/poky && curl -L -o resources/poky.tar.bz2 https://downloads.yoctoproject.org/releases/yocto/yocto-4.2.3/poky-aa63b25cbe25d89ab07ca11ee72c17cab68df8de.tar.bz2 && tar -xvjf resources/poky.tar.bz2 -C resources",
-		"compile": "tsc -b && npm run compile:server && npm run compile:client",
+		"compile": "tsc -b && npm run compile:lib && npm run compile:server && npm run compile:client",
 		"watch": "tsc -b -w",
+		"compile:lib": "tsc -p lib/tsconfig.json",
 		"compile:client": "tsc -p client/tsconfig.json",
 		"watch:client": "tsc -w -p client/tsconfig.json",
 		"compile:server": "cd server && npm run installServer && tsc -p tsconfig.json",
@@ -29,7 +31,7 @@
 		"watch:server": "cd server && npm run installServer && tsc -w -p tsconfig.json",
 		"clean:server": "rm -fr ./server/node_modules ./client/server server/tsconfig.tsbuildinfo server/.vscode-test",
 		"clean:client": "rm -fr ./client/node_modules ./client/out client/tsconfig.tsbuildinfo client/.vscode-test client/*.vsix",
-		"clean:lib": "rm -fr ./lib/node_modules",
+		"clean:lib": "rm -fr ./lib/node_modules ./lib/out",
 		"clean": "npm run clean:lib && npm run clean:server && npm run clean:client && rm -fr node_modules integration-tests/out .vscode-test .eslintcache resources/poky* coverage ./out",
 		"lint": "eslint . --ext js,ts --cache",
 		"jest": "jest",
@@ -42,10 +44,9 @@
 		"@types/jest": "^29.5.5",
 		"@types/mocha": "^10.0.1",
 		"@types/node": "^20.6.1",
-    	"@types/vscode": "^1.75.1",
-		"@vscode/vsce": "^2.3.5",
+		"@types/vscode": "^1.75.1",
 		"@vscode/test-electron": "^2.3.5",
-		"vscode-tmgrammar-test": "^0.1.2",
+		"@vscode/vsce": "^2.3.5",
 		"eslint": "^8.51.0",
 		"eslint-config-standard-with-typescript": "^39.1.1",
 		"eslint-plugin-deprecation": "^2.0.0",
@@ -57,9 +58,10 @@
 		"jest": "^29.7.0",
 		"mocha": "^10.2.0",
 		"ts-jest": "^29.1.1",
-		"typescript": "^5.1.3"
-	},
-	"workspaces": [
-	  "client/src/lib"
-	]
+		"ts-loader": "^9.5.0",
+		"typescript": "^5.1.3",
+		"vscode-tmgrammar-test": "^0.1.2",
+		"webpack": "^5.89.0",
+		"webpack-cli": "^5.1.4"
+	}
 }
