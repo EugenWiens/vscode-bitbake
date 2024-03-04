@@ -1,4 +1,6 @@
-> Sorry folk, I don't have any time to work on this plugin. I'm very happy that one take over the work. Please use the fork https://github.com/savoirfairelinux/vscode-bitbake/tree/staging
+> Sorry folk, I don't have any time to work on this plugin. I'm very happy that the project is takeover by Yocto Project
+> Official YP fork https://github.com/yoctoproject/vscode-bitbake
+> https://marketplace.visualstudio.com/items?itemName=yocto-project.yocto-bitbake
 
 
 # BitBake recipe language support plugin for Visual Studio Code
